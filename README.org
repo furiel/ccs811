@@ -17,3 +17,8 @@ Also there is a few days of burn in period after boxing, when the values are unu
 python3 -m pip install hy pyserial
 hy ccs811-save-data.hy --serial /dev/ttyACM0 --logs /var/log/ccs811
 #+END_SRC
+
+* Read the sensor directly using raspberry pi2.
+#+BEGIN_SRC bash
+python3 ccs811-sensor-rpi2.py
+#+END_SRC
