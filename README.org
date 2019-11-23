@@ -1,0 +1,13 @@
+* ccs811
+Some code to read ccs811 co2 sensor
+
+** Building
+- Install CCS811 arduino library for Arduino IDE.
+https://github.com/adafruit/Adafruit_CCS811
+
+- Compile
+- Upload
+- Profit
+After each restart, the sensor needs 20 minutes to stabilize.
+
+Also there is a few days of burn in period after boxing, when the values are unusable. You need to be very patient ...
