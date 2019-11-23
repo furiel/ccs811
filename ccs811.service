@@ -1,0 +1,8 @@
+[Unit]
+Description=ccs811
+
+[Service]
+ExecStart=/bin/hy /usr/bin/ccs811/ccs811-save-data.hy
+
+[Install]
+WantedBy=multi-user.target
