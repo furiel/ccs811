@@ -1,5 +1,5 @@
 * ccs811
-Some code to read ccs811 co2 sensor
+Some code to read ccs811 co2 sensor, and store data with thingspeak.
 
 * Building
 - Install CCS811 arduino library for Arduino IDE.
@@ -15,7 +15,7 @@ Also there is a few days of burn in period after boxing, when the values are unu
 * Read data from serial
 #+BEGIN_SRC bash
 python3 -m pip install hy pyserial
-hy ccs811-save-data.hy --serial /dev/ttyACM0 --logs /var/log/ccs811
+hy ccs811-save-data.hy --serial /dev/ttyACM0 --logs /var/log/ccs811 --api-key '...'
 #+END_SRC
 
 * Read the sensor directly using raspberry pi2.
