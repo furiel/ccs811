@@ -1,5 +1,6 @@
 [Unit]
 Description=ccs811
+After=network.target
 
 [Service]
 ExecStart=/bin/hy /usr/bin/ccs811/ccs811-save-data.hy --serial <serial-device> --logs <log dir> --api-key <optional api key for ThingSpeak>
