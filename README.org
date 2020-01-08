@@ -1,5 +1,5 @@
 * ccs811
-Some code to read ccs811 co2 sensor, and store data with thingspeak.
+Some code to read ccs811 co2 sensor, and store data with [[https://thingspeak.com][ThingSpeak]].
 
 * Building
 - Install CCS811 arduino library for Arduino IDE.
@@ -13,6 +13,10 @@ After each restart, the sensor needs 20 minutes to stabilize.
 Also there is a few days of burn in period after boxing, when the values are unusable. You need to be very patient ...
 
 * Read data from serial
+Data is saved in the log directory. The data is organized into different files by date. For example measurements on 2020-01-01 is put into a file named "2020-01-01".
+
+Optionally you can specify a ThingSpeak api key. Then the data is sent to your ThingSpeak account, where you can visualize the results.
+
 #+BEGIN_SRC bash
 python3 -m pip install hy pyserial
 hy ccs811-save-data.hy --serial /dev/ttyACM0 --logs /var/log/ccs811 --api-key '...'
@@ -22,3 +26,6 @@ hy ccs811-save-data.hy --serial /dev/ttyACM0 --logs /var/log/ccs811 --api-key '.
 #+BEGIN_SRC bash
 python3 ccs811-sensor-rpi2.py
 #+END_SRC
+
+* Start with systemd
+You can edit then deploy the provided systemd template. Please specify your own parameters.

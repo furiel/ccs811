@@ -2,7 +2,7 @@
 Description=ccs811
 
 [Service]
-ExecStart=/bin/hy /usr/bin/ccs811/ccs811-save-data.hy
+ExecStart=/bin/hy /usr/bin/ccs811/ccs811-save-data.hy --serial <serial-device> --logs <log dir> --api-key <optional api key for ThingSpeak>
 
 [Install]
 WantedBy=multi-user.target
